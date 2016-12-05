@@ -7,7 +7,7 @@
 import time
 
 
-def tail(filed):
+def tailf(filed):
     """Python like tail generator. It takes a file descriptor and keeps for
     waiting for data to arrive to the file. """
     print "Started tailing ..."
@@ -31,6 +31,6 @@ if __name__ == "__main__":
     filedesc = open("/var/log/apache2/access.log")
     # read from the generator all newly arrived lines and print them to
     # console.
-    for line in tail(filedesc):
+    for line in tailf(filedesc):
         print line,
 
