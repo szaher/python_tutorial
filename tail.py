@@ -22,11 +22,11 @@ def tail(filed):
             time.sleep(0.1)
             continue
         # send lines read from the log file
+
         yield _line
 
 
 if __name__ == "__main__":
-    print "Started ... "
     # open a file and get a file descriptor
     filedesc = open("/var/log/apache2/access.log")
     # read from the generator all newly arrived lines and print them to
