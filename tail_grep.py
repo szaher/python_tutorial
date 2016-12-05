@@ -1,4 +1,4 @@
-#
+#!/usr/bin/env python
 #  tail and grep :)
 #
 #
