@@ -28,6 +28,35 @@ def test_iterator2():
         except StopIteration:
             break
 
+
+class MString(object):
+    def __init__(self, istr):
+        self.index = 0
+        self.istr = istr
+
+    def __next__(self):
+        return self.next()
+
+    def next(self):
+        try:
+            char = self.istr[self.index]
+            self.index += 1
+            return char
+        except IndexError:
+            raise StopIteration
+
+    def __iter__(self):
+        return self
+
+
+def test_mstring():
+    string = "Python is Great"
+    myiter = MString(istr=string)
+    for i in myiter:
+        print i,
+    print ""
+
 if __name__ == "__main__":
     test_iterator()
     test_iterator2()
+    test_mstring()
