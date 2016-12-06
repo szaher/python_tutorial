@@ -7,6 +7,7 @@
 ##
 import itertools
 
+
 def test_iterator():
     """Test reading from file as iterator example"""
     filed = open("/tmp/saad/x")
@@ -56,6 +57,7 @@ def test_mstring():
         print i,
     print ""
 
+
 # drop me
 
 
@@ -77,3 +79,4 @@ if __name__ == "__main__":
     test_iterator2()
     test_mstring()
     test_drop()
+
