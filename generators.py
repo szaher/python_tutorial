@@ -7,6 +7,8 @@
 from __future__ import print_function
 import time
 import copy
+import itertools
+
 
 # Test using return statement at the end of a generator
 
@@ -30,6 +32,12 @@ def test_countdown(number):
         except StopIteration as e:
             print (e.value)
 
+
+
+def comprehension():
+    g =(x ** 2 for x in itertools.count())
+    for i in g:
+        print (i)
 
 
 # Test delegation of generators
@@ -91,4 +99,5 @@ if __name__ == "__main__":
     print ("Hello World !")
 #     test_countdown(5)
 #     test_chain()
-    test_mycoroutine()
+#     test_mycoroutine()
+    comprehension()
